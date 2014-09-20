@@ -35,37 +35,6 @@ David Meyer, Achim Zeileis, and Kurt Hornik (2006). The Strucplot Framework: Vis
 ## The `party` Package and `cforest` Function
 
 
-```r
-library(datasets)
-library(party)
-```
-
-```
-## Warning: package 'party' was built under R version 3.1.1
-```
-
-```
-## Loading required package: grid
-## Loading required package: zoo
-## 
-## Attaching package: 'zoo'
-## 
-## Les objets suivants sont masqués from 'package:base':
-## 
-##     as.Date, as.Date.numeric
-## 
-## Loading required package: sandwich
-```
-
-```
-## Warning: package 'sandwich' was built under R version 3.1.1
-```
-
-```
-## Loading required package: strucchange
-## Loading required package: modeltools
-## Loading required package: stats4
-```
 
 ```r
   cf <- cforest(Species ~ ., data = iris, control=cforest_unbiased(ntree=12, mtry=4)) 

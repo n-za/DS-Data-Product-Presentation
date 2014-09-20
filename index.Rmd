@@ -34,10 +34,11 @@ David Meyer, Achim Zeileis, and Kurt Hornik (2006). The Strucplot Framework: Vis
 
 ## The `party` Package and `cforest` Function
 
-```{r}
+```{r, echo=FALSE,warnings=FALSE}
 library(datasets)
 library(party)
-```{r,warnings=FALSE, results="hide"}
+```
+```{r, warnings=FALSE, results="hide"}
   cf <- cforest(Species ~ ., data = iris, control=cforest_unbiased(ntree=12, mtry=4)) 
   pt <- party:::prettytree(cf@ensemble[[1]], names(cf@data@get("input"))) 
   nt <- new("BinaryTree") 
