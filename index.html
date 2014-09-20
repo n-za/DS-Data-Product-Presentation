@@ -80,34 +80,7 @@
     <h2>The <code>party</code> Package and <code>cforest</code> Function</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">library(datasets)
-library(party)
-</code></pre>
-
-<pre><code>## Warning: package &#39;party&#39; was built under R version 3.1.1
-</code></pre>
-
-<pre><code>## Loading required package: grid
-## Loading required package: zoo
-## 
-## Attaching package: &#39;zoo&#39;
-## 
-## Les objets suivants sont masqués from &#39;package:base&#39;:
-## 
-##     as.Date, as.Date.numeric
-## 
-## Loading required package: sandwich
-</code></pre>
-
-<pre><code>## Warning: package &#39;sandwich&#39; was built under R version 3.1.1
-</code></pre>
-
-<pre><code>## Loading required package: strucchange
-## Loading required package: modeltools
-## Loading required package: stats4
-</code></pre>
-
-<pre><code class="r">  cf &lt;- cforest(Species ~ ., data = iris, control=cforest_unbiased(ntree=12, mtry=4)) 
+    <pre><code class="r">  cf &lt;- cforest(Species ~ ., data = iris, control=cforest_unbiased(ntree=12, mtry=4)) 
   pt &lt;- party:::prettytree(cf@ensemble[[1]], names(cf@data@get(&quot;input&quot;))) 
   nt &lt;- new(&quot;BinaryTree&quot;) 
   nt@tree &lt;- pt 
